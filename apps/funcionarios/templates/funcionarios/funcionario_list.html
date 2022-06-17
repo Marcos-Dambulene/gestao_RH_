@@ -2,9 +2,20 @@
 
 {% block main %}
  <h3>Lista de cadastrados Funcionários</h3>
-<br>
-    {% for funcionario in object_list %}
-        <a href="{% url 'update_funcionario' funcionario.id %}">{{ funcionario}}</a>
-<br>
+    <br>
+        {% for funcionario in object_list %}
+            <a href="{% url 'update_funcionario' funcionario.id %}">
+                {{ funcionario}}
+            </a>
+        <h4>
+          <a href="{% url 'delete_funcionario' funcionario.id %}"  class="btn btn-dager">
+                    Deletar
+          </a>
+        </h4>
+
     {% endfor %}
+
+        <a href="{% url 'create_funcionario' %}" class="btn btn-info">
+                    Novo
+         </a>
 {% endblock %}
