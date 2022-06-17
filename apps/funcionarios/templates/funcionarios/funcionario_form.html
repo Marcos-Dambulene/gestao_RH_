@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
+{% load bootstrap %}
 
 {% block main %}
 
 <h1> Editar meus dados</h1>
 <form method="post">
     {%  csrf_token %}
-    {{ form.as_p }}
+    {{ form|bootstrap }}
+
     <button type="submit">Salvar</button>
 </form>
 {% endblock %}
