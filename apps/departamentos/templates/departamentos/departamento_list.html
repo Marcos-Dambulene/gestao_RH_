@@ -4,10 +4,15 @@
  <h3>Lista de cadastrados Departamento</h3>
     <br>
         {% for departamento in object_list %}
-            <a href="">
+            <a href="{% url 'update_departamento' departamento.id %}">
                 {{departamento}}
             </a>
         <h4>
+
+          <a href=""  class="btn btn-dager">
+                    Deletar
+          </a>
+
         </h4>
 
     {% endfor %}
