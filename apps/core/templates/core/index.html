@@ -6,7 +6,8 @@
               Column
             </div>
             <div class="col">
-              ola {{usuario.funcionario.nome}}
+              ola {{usuario.funcionario.nome}
+                <a href="{% url 'list_funcionarios'%}">Logout</a>
             </div>
             <div class="col">
                <a href="{% url 'logout'%}">Logout</a>
